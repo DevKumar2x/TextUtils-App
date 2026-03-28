@@ -49,12 +49,12 @@ export default function TextArea(props) {
         <textarea value={text} placeholder={placeholderText} id="Textarea" rows="6" className="form-control" onChange={change} 
         style={{backgroundColor:props.mode === 'dark' ? '#124063' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}}></textarea>
       </div>
-      <button type="button" onClick={handleClickUp} className="btn btn-primary mx-2">Convert to Uppercase</button>
-      <button type="button" onClick={handleClickLow} className="btn btn-success mx-2">Convert to Lowercase</button>
-      <button type="button" onClick={handleClickCap} className="btn btn-primary mx-2">Convert to Capitalize</button>
-      <button type="button" onClick={handleClickCCopy} className="btn btn-success mx-2">Copy Text</button>
-      <button type="button" onClick={handleClickClear} className="btn btn-primary mx-2">Clear Text</button>
-      <button type="button" onClick={handleExtraSpaces} className="btn btn-success mx-2">Remove Extra Spaces</button>
+      <button type="button" onClick={handleClickUp} className="btn btn-primary mx-2 my-1">Convert to Uppercase</button>
+      <button type="button" onClick={handleClickLow} className="btn btn-success mx-2 my-1">Convert to Lowercase</button>
+      <button type="button" onClick={handleClickCap} className="btn btn-primary mx-2 my-1">Convert to Capitalize</button>
+      <button type="button" onClick={handleClickCCopy} className="btn btn-success mx-2 my-1">Copy Text</button>
+      <button type="button" onClick={handleClickClear} className="btn btn-primary mx-2 my-1">Clear Text</button>
+      <button type="button" onClick={handleExtraSpaces} className="btn btn-success mx-2 my-1">Remove Extra Spaces</button>
     </form>
     <div className="container my-3" style={{color:props.mode === 'dark' ? 'white' : 'black'}}>
       <h3>Your text summary</h3>
