@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-export default function Navbar({ title = "Set title here", aboutText = "About", mode, toggleMode, handleGreen }) {
+export default function Navbar({ title = "Set title here", aboutText = "About", mode, toggleMode, handleGreen, m1On }) {
   return (
     <nav className={`navbar navbar-expand-lg ${`navbar-${mode} bg-${mode}`}`}>
       <div className="container-fluid">
@@ -20,7 +20,7 @@ export default function Navbar({ title = "Set title here", aboutText = "About", 
           </ul>
         </div>
 
-        <span class="badge rounded-pill text-bg-success mx-3" onClick={handleGreen}>M1</span>
+        <span className={`badge rounded-pill ${m1On ? 'text-bg-success' : 'text-bg-secondary'} mx-3`} onClick={handleGreen}>M1</span>
 
         <div className={`form-check form-switch text-${mode === 'light' ? 'dark' : 'light'}`}>
           <input className="form-check-input" type="checkbox" role="switch" id="switchCheckDefault" checked={mode === 'dark'} onChange={toggleMode}/>
@@ -34,5 +34,7 @@ export default function Navbar({ title = "Set title here", aboutText = "About", 
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
   aboutText: PropTypes.string,
-  mode: PropTypes.bool
+  mode: PropTypes.string,
+  handleGreen: PropTypes.func,
+  m1On: PropTypes.bool
 }

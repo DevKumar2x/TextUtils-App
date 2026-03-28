@@ -1,13 +1,40 @@
 
-export const About = () => {
+export const About = ({ mode }) => {
+  const textColor = mode === 'dark' ? 'white' : '#042743'
+
   return (
-    <div>
-      <h1>About Us</h1>
-      <p>Welcome to TextUtils! We are a simple and user-friendly utility for manipulating text.</p>
-      <p>Our mission is to provide a convenient tool for users to perform various text transformations and analyses.</p>
-      <p>Whether you need to convert text to uppercase, lowercase, or analyze word count, TextUtils has got you covered.</p>
-      <p>We are committed to continuously improving our tool and providing the best experience for our users.</p>
-      <p>Thank you for choosing TextUtils!</p>
+    <div className="container" style={{ color: textColor }}>
+      <h1>About TextUtils</h1>
+
+      <p>
+        TextUtils is a lightweight, client-side utility for manipulating and
+        analyzing text quickly. It's designed for writers, developers, and
+        anyone who needs fast text transformations without leaving the browser.
+      </p>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Convert text to uppercase, lowercase, or sentence case</li>
+        <li>Remove extra spaces and trim lines</li>
+        <li>Copy, clear, and preview text instantly</li>
+        <li>Quick word & character count and reading time estimate</li>
+      </ul>
+
+      <h2>How to Use</h2>
+      <p>
+        Paste or type text into the main editor, then choose an action from the
+        toolbar. Results are shown instantly — no server round-trip required.
+      </p>
+
+      <h2>Tech & Contribution</h2>
+      <p>
+        Built with React and plain CSS. Contributions, bug reports, and
+        improvements are welcome — open a pull request or issue on the
+        repository.
+      </p>
+
+      <h2>Contact</h2>
+      <p>For questions or feedback, please use the project README or create an issue.</p>
     </div>
   )
 }
