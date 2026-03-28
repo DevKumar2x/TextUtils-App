@@ -64,7 +64,7 @@ function App() {
       <div className="container my-3">
         <Routes>
           <Route path="/about" element={<About mode={Mode} />} />
-          <Route path="/" element={<TextArea heading="Enter the text to analyze" mode={Mode} showAlert={showAlert} />} />
+          <Route path="/" element={<TextArea heading="TextUtils - Word Counter" mode={Mode} showAlert={showAlert} />} />
         </Routes>
       </div>
 
